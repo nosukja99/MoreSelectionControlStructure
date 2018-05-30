@@ -1,0 +1,44 @@
+A program is required by a company to read an employee’s number, pay rate and the number of hours worked 
+in a week. The program is then to validate the pay rate field and the hours worked field and, if valid, compute 
+the employee’s weekly pay and then print it and the input data.
+
+Validation: According to the company’s rules, the maximum hours an employee can work per week is 60 hours, 
+and the maximum hourly rate is $25.00 per hour. If the hours worked field or the hourly rate field is out of range, 
+the input data and an appropriate message are to be printed and the employee’s weekly pay is not to be calculated.
+
+Weekly pay calculation: Weekly pay is calculated as hours worked times pay rate. If more than 35 hours are worked, 
+payment for the overtime hours worked is calculated at time-and-a-half.
+	
+    ALGORITHM : compute the employee's pay and display 
+	
+	===================================
+	INPUT : int employeeNum, payRate, workedHour
+
+	PROCESSING STEPS : workedHour*payRate 
+	                   If workedHour is greater than 35: calculate 35*payRate+(workedHour-35)*1.5*payRate
+
+	OUTPUTS : employee's weekly pay
+
+	=================================
+	PSEUDOCODE : Initialize int employeeNum to zero
+	             Initialize double payRate to zero
+				 Initialize int workedHour to zero
+				 Initialize double weeklyPay to zero
+
+	             Prompt user input employeeNum, payRate, and workedHour
+				 Get name	
+				 Prompt user input payRate
+				 if payRate is greater than 25 or less than 0
+				    display original input and prompt to user input valid payRate
+				 Get payRate
+				 Prompt user input workedHour
+				 if workedHour is greater than 60 or less than 0
+				    display original input and prompt to user input valid workedHour
+				 Get payRate
+		
+			     if workedHour > 35
+				    weeklyPay=35*payRate+(workedHour-35)*1.5*payRate
+				 else
+				    weeklyPay=workedHour*payRate 
+					
+				 Display weeklyPay, employeeNum, payRate, workedHour

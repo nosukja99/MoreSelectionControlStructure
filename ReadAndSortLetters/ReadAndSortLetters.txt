@@ -1,0 +1,69 @@
+Design an algorithm that will prompt the user for three letters, receive those letters as input, 
+    sort them into ascending sequence and display them to the monitor		
+
+	
+	ALGORITHM : compare each letters and sort by ascending order 
+	
+	===================================
+	INPUT : String firstL, secondL, thirdL
+
+	PROCESSING STEPS : compare firstL and secondL and change by ascending order 
+	                   and then compare thirdL to firstL and also compare to thirdL to secondL
+
+	OUTPUTS : all three letters by ascending order
+
+	=================================
+	PSEUDOCODE : Initialize String firstL to null
+	             Initialize String secondL to null
+				 Initialize String thirdL to null
+				 Initialize String temp to null
+	             Prompt user input a first letter
+				 Get firstL
+				 prompt user input a second letter
+				 if second letter is same to first letter
+				    prompt user to input another letter
+				 Get secondL
+				 prompt user input a third letter
+				 if third letter is same to first letter or second letter
+				    prompt user to input another letter
+				 Get thirdL
+				 
+				 IF (firstL is greater than secondL)
+					 THEN
+					   temp = firstL
+					   firstL = secondL
+					   secondL = temp
+					   IF( FirstL is greater than thirdL)
+					   THEN
+							  temp = firstL
+							  firstL = thirdL
+							  thirdL = temp
+							  IF (secondL is greater than thirdL)
+							  THEN
+									temp = secondL
+									secondL = thirdL
+									thirdL = temp
+							  ENDIF
+						ENDIF
+					   ELSE 
+					   IF ( secondL is greater than thirdL)
+					   THEN
+							  temp = secondL
+							  secondL = thirdL
+							  thirdL = temp
+					   ENDIF
+					
+			     ELSE
+				 IF ( firstL is greater than thirdL)
+				 THEN 
+					temp = firstL
+					firstL=thirdL
+					thirdL=temp
+				 ELSE
+				 IF (secondL is greater than thirdL)
+				 THEN
+				    temp = secondL
+					secondL = thirdL
+					thirdL=temp
+				
+				Diaplay firstL, secondL, thirdL
